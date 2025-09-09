@@ -1,0 +1,261 @@
+</footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tuyển dụng | H&amp;S Tech</title>
+  <meta name="description" content="Trang tuyển dụng chính thức của H&amp;S Tech tại Khu công nghiệp Quế Võ, TP. Bắc Ninh." />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #190dc9;
+      --panel: #466ab1;
+      --text: #c0cc17;
+      --muted:#94a3b8;
+      --accent:#22c55e;
+      --accent-2:#2b20b9;
+      --card:#111827;
+      --chip:#1f2937;
+      --ring: rgba(96,165,250,.45);
+      --shadow: 0 10px 25px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(99,102,241,.15), transparent 60%),
+                  radial-gradient(800px 600px at 10% 10%, rgba(34,197,94,.15), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent-2); text-decoration:none}
+    a:hover{opacity:.9}
+
+    .container{width:min(1120px, 92%); margin-inline:auto}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; border:1px solid rgba(255,255,255,.08); color:#0b1220;
+      background:linear-gradient(180deg,#fff,#dbeafe);
+      padding:.9rem 1.2rem; border-radius:999px; font-weight:700; letter-spacing:.2px;
+      box-shadow: var(--shadow);
+    }
+    .btn--ghost{background:transparent; color:var(--text); border-color:rgba(255,255,255,.15)}
+    .btn:focus{outline:3px solid var(--ring)}
+
+    header{position:sticky; top:0; z-index:30; backdrop-filter: blur(10px); background:rgba(15,23,42,.55); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:1rem 0}
+    .brand{display:flex; align-items:center; gap:.8rem}
+    .brand img{height:40px; width:auto; border-radius:8px}
+    .brand h1{font-size:1.15rem; margin:0}
+
+    .hero{padding: clamp(3rem, 6vw, 6rem) 0 3rem}
+    .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center}
+    .hero h2{font-size: clamp(2rem, 4.2vw, 3.2rem); line-height:1.1; margin:0 0 1rem; font-weight:800}
+    .lead{color:var(--muted); font-size:1.05rem}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08);
+      padding:1.2rem; border-radius:var(--radius); box-shadow:var(--shadow)}
+    .pill{display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .7rem; background:rgba(99,102,241,.15); border:1px solid rgba(99,102,241,.35);
+      color:#c7d2fe; border-radius:999px; font-weight:600; font-size:.85rem}
+
+    .section{padding: 2.2rem 0}
+    .section h3{font-size:1.6rem; margin:0 0 1rem}
+    .grid{display:grid; gap:1rem}
+    .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns: repeat(2, 1fr)}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns: 1fr}
+      .grid.cols-2{grid-template-columns: 1fr}
+    }
+
+    .card{background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08);
+      padding:1.2rem; border-radius:var(--radius); transition: transform .15s ease, border-color .2s ease}
+    .card:hover{transform: translateY(-2px); border-color: rgba(255,255,255,.18)}
+    .card h4{margin:0 0 .4rem; font-size:1.1rem}
+    .tag{display:inline-block; padding:.25rem .6rem; border-radius:999px; background:var(--chip); color:#cbd5e1; font-size:.8rem; border:1px solid rgba(255,255,255,.08)}
+
+    .jobs .card ul{margin:.6rem 0 0 1.1rem}
+    .jobs .card li{margin:.3rem 0}
+
+    .contact{display:grid; grid-template-columns: 1.1fr .9fr; gap:1.2rem}
+    @media (max-width: 900px){.contact{grid-template-columns:1fr}}
+
+    form{display:grid; gap:.8rem}
+    label{font-weight:600}
+    input, textarea, select{
+      width:100%; padding:.9rem 1rem; border-radius:14px; border:1px solid rgba(255,255,255,.12);
+      background: rgba(2,6,23,.55); color:var(--text); outline:none
+    }
+    input:focus, textarea:focus, select:focus{border-color:var(--accent-2); box-shadow:0 0 0 3px var(--ring)}
+    textarea{min-height:140px; resize:vertical}
+    .muted{color:var(--muted); font-size:.95rem}
+
+    footer{border-top:1px solid rgba(255,255,255,.06); margin-top:2.2rem; padding:1.6rem 0; color:#cbd5e1}
+    .chips{display:flex; flex-wrap:wrap; gap:.5rem}
+
+    .map{width:100%; border:0; height:300px; border-radius:var(--radius); filter: saturate(1.1) contrast(1.05)}
+
+    .hero-img{border-radius: var(--radius); box-shadow: var(--shadow); max-width:100%; height:auto}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo.png" alt="Logo H&amp;S Tech">
+        <h1>H&amp;S Tech · Tuyển dụng</h1>
+      </div>
+      <nav class="chips" aria-label="Liên kết nhanh">
+        <a class="tag" href="#vi-tri">Vị trí mở</a>
+        <a class="tag" href="#phuc-loi">Phúc lợi</a>
+        <a class="tag" href="#ung-tuyen">Ứng tuyển</a>
+        <a class="tag" href="#lien-he">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill">Tuyển dụng tại Quế Võ · Bắc Ninh</span>
+          <h2>Gia nhập H&amp;S Tech và cùng tạo nên những giải pháp sản xuất thông minh</h2>
+          <p class="lead">Chúng tôi tìm kiếm những đồng đội nhiệt huyết ở nhiều vị trí: sản xuất, kỹ thuật, QA/QC, kế hoạch, kho vận… Làm việc tại <strong>Khu công nghiệp Quế Võ, TP. Bắc Ninh</strong> với môi trường chuyên nghiệp, thu nhập cạnh tranh.</p>
+          <div style="display:flex; gap:.6rem; margin-top:1rem">
+            <a href="#ung-tuyen" class="btn">Ứng tuyển ngay</a>
+            <a href="#vi-tri" class="btn btn--ghost">Xem vị trí mở</a>
+          </div>
+        </div>
+        <div>
+          <img src="staff.png" alt="Nhân viên H&amp;S Tech" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="phuc-loi">
+      <div class="container">
+        <h3>Phúc lợi &amp; Môi trường làm việc</h3>
+        <div class="grid cols-3">
+          <div class="card">
+            <h4>Thu nhập &amp; Phụ cấp</h4>
+            <p class="muted">Mức lương cạnh tranh theo năng lực; phụ cấp ăn ca, xăng xe; thưởng tháng/quý/năm.</p>
+          </div>
+          <div class="card">
+            <h4>Đào tạo &amp; Lộ trình</h4>
+            <p class="muted">Onboarding bài bản, đào tạo kỹ năng/kỹ thuật định kỳ, lộ trình thăng tiến rõ ràng.</p>
+          </div>
+          <div class="card">
+            <h4>Văn hoá tích cực</h4>
+            <p class="muted">Tôn trọng – Hợp tác – Hiệu quả. Không ngừng cải tiến, đề cao sáng kiến cá nhân.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section jobs" id="vi-tri">
+      <div class="container">
+        <h3>Vị trí đang tuyển</h3>
+        <div class="grid cols-3">
+          <article class="card">
+            <header style="display:flex; justify-content:space-between; align-items:center; gap:.6rem">
+              <h4>Kế hoạch sản xuất (Planner)</h4>
+              <span class="tag">Full-time</span>
+            </header>
+            <p class="muted">Lập kế hoạch sản xuất, theo dõi tiến độ, điều phối vật tư.</p>
+            <ul>
+              <li>Tốt nghiệp CĐ/ĐH khối kinh tế/kỹ thuật</li>
+              <li>Excel khá; ưu tiên biết ERP</li>
+              <li>Kỹ năng giao tiếp, phối hợp</li>
+              <li>Ưu tiên các ứng viên đã làm việc tại SAMSUNG</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header style="display:flex; justify-content:space-between; align-items:center; gap:.6rem">
+              <h4>Kỹ thuật sản xuất</h4>
+              <span class="tag">Ca hành chính</span>
+            </header>
+            <p class="muted">Hỗ trợ kỹ thuật, tối ưu công đoạn, xử lý sự cố thiết bị cơ bản.</p>
+            <ul>
+              <li>Hiểu biết 5S/Kaizen, QC tools căn bản</li>
+              <li>Ưu tiên có kinh nghiệm tại nhà máy điện tử</li>
+               <li>Nắm rõ hạng mục quản lý 3D5S</li>
+              <li>Chủ động, tinh thần học hỏi</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header style="display:flex; justify-content:space-between; align-items:center; gap:.6rem">
+              <h4>QC/QA</h4>
+              <span class="tag">Theo ca</span>
+            </header>
+            <p class="muted">Kiểm soát chất lượng đầu vào/đầu ra, lập báo cáo chất lượng.</p>
+            <ul>
+              <li>Đọc hiểu tài liệu kỹ thuật cơ bản</li>
+              <li>Cẩn thận, tỉ mỉ, chịu khó</li>
+              <li>Sẵn sàng làm việc theo ca</li>
+               <li>Tinh thần cởi mở , giao lưu , hát hò tốt</li>
+            </ul>
+          </article>
+        </div>
+        <p class="muted" style="margin-top:.8rem">* Danh sách mang tính minh hoạ. Có thể tuỳ chỉnh theo nhu cầu thực tế.</p>
+      </div>
+    </section>
+
+    <section class="section" id="ung-tuyen">
+      <div class="container contact">
+        <div>
+          <h3>Ứng tuyển ngay</h3>
+          <p class="muted">Vui lòng điền thông tin ứng tuyển, chúng tôi sẽ liên hệ sớm nhất:</p>
+          <form>
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="position">Vị trí ứng tuyển</label>
+            <select id="position" name="position" required>
+              <option value="">-- Chọn vị trí --</option>
+              <option value="planner">Kế hoạch sản xuất</option>
+              <option value="tech">Kỹ thuật sản xuất</option>
+              <option value="qcqa">QC/QA</option>
+            </select>
+
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Ghi chú</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit" class="btn">Gửi thông tin</button>
+          </form>
+        </div>
+        <div>
+          <h3 id="lien-he">Liên hệ</h3>
+          <p class="muted">Công ty TNHH H&amp;S Tech – Khu công nghiệp Quế Võ 1, Phường Vân Dương ,Thành phố Bắc Ninh , Tỉnh Bắc Ninh</p>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9984639999996!2d106.0932103!3d21.1646079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313503cf44e3f7a9%3A0x21f6f6f6f6f6f6f6!2zS1RWIFF14buRYiBW4bu5!5e0!3m2!1svi!2s!4v1693471111111" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap">
+      <p>© <span id="y"></span> H&amp;S Tech. Mọi quyền được bảo lưu.</p>
+      <div class="chips">
+        <span class="tag">Quế Võ · Bắc Ninh</span>
+        <a class="tag" href="mailto:atuan.nguyen1909@gmail.com">Email HR</a>
+        <a class="tag" href="tel:0969846222">Gọi: 0969 846 222</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
